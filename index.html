@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>VueJS CDN</title>
+    <title>VueJS CDN v.3</title>
     <link rel="stylesheet"
           href="style.css">
 </head>
@@ -11,24 +11,24 @@
 <!-- add directive ("v-cloak" await app mount itself) to improve performance -->
 <div id="app" v-cloak>
     <h1>Vue CDN</h1>
-    {{ 2 + 2 }}
-    {{ firstName }}
-    {{ lastName }}
-    {{ age }}
-    <p>Move the logic outside the template </p>
-    <strong> {{ fullName() }} </strong>
+    {{ firstName }} / {{ lastName }} / {{ age }}
+
+    <p>Move the logic outside the template: </p>
+    <!--    <strong> {{ fullName() }} </strong>-->
+    <!--  After moving fullName() method to computed  -->
+    <strong> {{ fullName }} </strong>
 
     <hr/>
 
     <h4>Reactivity / Data binding </h4>
     <form>
-        <label>First Name: </label>
+        <label>First Name (with focus out): </label>
         <!-- add directive + modifier ("v-model.lazy.trim" updates template) to improve reactivity; removes white spaces before/after input -->
         <input type="text"
                v-model.lazy.trim="firstName">
         <br/>
 
-        <label>Middle Name: </label>
+        <label>Middle Name (with Enter): </label>
         <!-- add key aliases (".enter") updates value ou press Enter -->
         <input type="text"
                @keyup.enter="updateMiddleName">
@@ -64,6 +64,7 @@
        target="_blank">Google</a> &
     <a :href="url"
        target="_blank">Google</a>
+    <br/>
     <br/>
 
     <label>Last Name: </label>

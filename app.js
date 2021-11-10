@@ -1,19 +1,14 @@
 const viewModel = Vue.createApp({
     data() {
         return {
-            firstName: 'tom',
-            middleName: 'mi',
-            lastName: 'kota',
+            firstName: 'First',
+            middleName: 'Middle',
+            lastName: 'Last',
             url: 'https://google.com',
             age: 20
         }
     },
     methods: {
-        fullName() {
-            return `${this.firstName.toUpperCase()} 
-            ${this.middleName.toUpperCase()}
-            ${this.lastName.toUpperCase()}`
-        },
         increment() {
             this.age++
         },
@@ -25,6 +20,14 @@ const viewModel = Vue.createApp({
         updateMiddleName(event) {
             event.preventDefault()
             this.middleName = event.target.value
+        },
+    },
+    computed: {
+        fullName() {
+            // console.log('---- fullName() ----')
+            return `${this.firstName.toUpperCase()} 
+            ${this.middleName.toUpperCase()}
+            ${this.lastName.toUpperCase()}`
         },
     }
 }).mount('#app')
