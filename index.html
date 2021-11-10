@@ -11,6 +11,33 @@
 <body>
 <h1>Vue CDN</h1>
 
+<hr/>
+
+<!-- APP #3 -->
+<div id="conditionalRendering">
+    <h4>Conditional rendering</h4>
+    <p v-if="mode == 1">
+        Showing <strong> v-if </strong> directive content
+    </p>
+    <template v-else-if="mode == 2">
+        <h3>Heading</h3>
+        <p> Showing <strong> v-else-if </strong> directive content</p>
+    </template>
+    <p v-else>
+        Showing <strong> v-else </strong> directive content
+    </p>
+
+    <p v-show="mode == 1"><strong>v-show </strong> if v-if</p>
+
+    <select v-model="mode">
+        <option value="1">v-if</option>
+        <option value="2">v-else-if</option>
+        <option value="3">v-else</option>
+    </select>
+</div>
+
+<hr/>
+
 <!-- APP #2 -->
 <div id="circle">
     <label>

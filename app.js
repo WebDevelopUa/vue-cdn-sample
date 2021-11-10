@@ -1,3 +1,13 @@
+// App #3
+const conditionalRendering = Vue.createApp({
+    data() {
+        return {
+            mode: 1
+        }
+    }
+}).mount('#conditionalRendering')
+
+// App #2
 const circle = Vue.createApp({
     data() {
         return {
@@ -22,6 +32,7 @@ const circle = Vue.createApp({
 }).mount('#circle')
 
 
+// App #1
 const viewModel = Vue.createApp({
     data() {
         return {
