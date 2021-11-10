@@ -13,8 +13,40 @@
 
 <hr/>
 
+<!-- APP #4 -->
+<div id="listsRendering">
+    <h4>Lists rendering</h4>
+    <ul>
+        <li v-for="(number, index) in numbers"
+            :class="number"
+            :key="number"
+        >
+            {{ index }}) {{ number }}
+        </li>
+    </ul>
+
+    <ul>
+        <li v-for="user in users">
+            {{ user.name }}: {{ user.age }} y.o.
+        </li>
+    </ul>
+
+    <ul>
+        <li v-for="user in users">
+            <div v-for="(value, key, index) in user">
+                {{ index }}) {{ key }} : {{ value }}
+            </div>
+        </li>
+    </ul>
+
+
+</div>
+
+<hr/>
+
 <!-- APP #3 -->
-<div id="conditionalRendering">
+<div id=" conditionalRendering
+">
     <h4>Conditional rendering</h4>
     <p v-if="mode == 1">
         Showing <strong> v-if </strong> directive content

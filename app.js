@@ -1,3 +1,18 @@
+// App #4
+const listsRendering = Vue.createApp({
+    data() {
+        return {
+            numbers: ['zero', 'one', 'two', 'three'],
+            users: [
+                {name: 'User1', age: 10},
+                {name: 'User2', age: 20},
+                {name: 'User3', age: 30},
+                {name: 'User4', age: 40},
+            ]
+        }
+    }
+}).mount('#listsRendering')
+
 // App #3
 const conditionalRendering = Vue.createApp({
     data() {
