@@ -1,3 +1,27 @@
+const circle = Vue.createApp({
+    data() {
+        return {
+            isPurple: false,
+            selectedColor: '',
+            size: 200
+        }
+    },
+    computed: {
+        circle_classes() {
+            return {
+                purple: this.isPurple
+            }
+        },
+        circle_style() {
+            return [
+                {width: this.size + 'px', height: this.size + 'px', lineHeight: this.size + 'px'},
+                {transform: 'rotate(180deg)'}
+            ]
+        }
+    }
+}).mount('#circle')
+
+
 const viewModel = Vue.createApp({
     data() {
         return {
@@ -31,7 +55,7 @@ const viewModel = Vue.createApp({
         },
     },
     watch: {
-        age(newVal, oldVal) {
+        age() {
             setTimeout(() => {
                 this.age = 100
             }, 2000)
