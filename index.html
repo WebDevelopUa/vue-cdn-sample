@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS CDN</title>
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+<body>
+
+<!-- add directive ("v-cloak" await app mount itself) to improve performance -->
+<div id="app" v-cloak>
+    <h1>Vue CDN</h1>
+    {{ 2 + 2 }}
+    {{ firstName }}
+    {{ lastName }}
+    {{ age }}
+    <p>Move the logic outside the template </p>
+    <strong> {{ fullName() }} </strong>
+
+    <hr/>
+
+    <h4>Reactivity / Data binding </h4>
+    <form>
+        <label>First Name: </label>
+        <!-- add directive + modifier ("v-model.lazy.trim" updates template) to improve reactivity; removes white spaces before/after input -->
+        <input type="text"
+               v-model.lazy.trim="firstName">
+        <br/>
+
+        <label>Middle Name: </label>
+        <!-- add key aliases (".enter") updates value ou press Enter -->
+        <input type="text"
+               @keyup.enter="updateMiddleName">
+        <br/>
+
+        <label>Last Name: </label>
+        <!-- add directive ("v-model" updates template) to improve reactivity -->
+        <input type="text"
+               v-model="lastName">
+        <br/>
+
+        <label>Age: </label>
+        <!-- add directive + modifier ("v-model.number" updates template, converts string to number) -->
+        <input type="number"
+               v-model.number="age">
+        <br/>
+
+        <!-- add directive ("v-on:click") to listen the events -->
+        <button type="button"
+                v-on:click="increment">
+            Increment
+        </button>
+        <button type="button"
+                @click.ctrl="age--">
+            Decrement (with Ctrl)
+        </button>
+    </form>
+    <hr/>
+
+    <h4>Dynamic binding </h4>
+    <!-- add directive ("v-bind" dynamic binding)  -->
+    <a v-bind:href="url"
+       target="_blank">Google</a> &
+    <a :href="url"
+       target="_blank">Google</a>
+    <br/>
+
+    <label>Last Name: </label>
+    <input type="text"
+           :value="lastName"
+           @input.prevent="updateLastName('Last Name!', $event)">
+</div>
+
+<!--<script src="https://unpkg.com/vue@next"></script>-->
+<script src="https://unpkg.com/vue@3.2.21/dist/vue.global.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

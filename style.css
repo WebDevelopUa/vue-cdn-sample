@@ -1,0 +1,6 @@
+/* Ctrl + F5 to clear browser cache */
+
+[v-cloak] {
+    /*display: none;*/
+    background-color: cadetblue;
+}
