@@ -29,6 +29,13 @@ const viewModel = Vue.createApp({
             ${this.middleName.toUpperCase()}
             ${this.lastName.toUpperCase()}`
         },
+    },
+    watch: {
+        age(newVal, oldVal) {
+            setTimeout(() => {
+                this.age = 100
+            }, 2000)
+        }
     }
 }).mount('#app')
 
