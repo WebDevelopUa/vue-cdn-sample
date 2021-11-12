@@ -1,3 +1,33 @@
+// App #5
+const cardsShift = Vue.createApp({
+    data() {
+        return {
+            items: [
+                {
+                    name: 'Item #1',
+                    message: 'Hello world 1!'
+                },
+                {
+                    name: 'Item #2',
+                    message: 'Hello world 2!'
+                },
+                {
+                    name: 'Item #3',
+                    message: 'Hello world 3!'
+                }
+            ]
+        }
+    }
+    ,
+    methods: {
+        move() {
+            const shifted = this.items.shift()
+            this.items.push(shifted)
+        }
+    }
+
+}).mount('#cardsShift')
+
 // App #4
 const listsRendering = Vue.createApp({
     data() {

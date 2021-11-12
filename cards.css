@@ -1,0 +1,40 @@
+body {
+    /*font-size: 20px;*/
+    font-family: sans-serif;
+    padding-top: 10px;
+    background: #e6ecf1;
+}
+
+#cardsShift {
+    text-align: center;
+}
+
+#cardsShift button {
+    background-color: #899ff4;
+    border-color: transparent;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#cardsShift .card {
+    font-size:1em;
+    width: 200px;
+    margin: 5px auto;
+    padding-bottom: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    display: block;
+    padding: 0.75rem;
+}
+
+#cardsShift input:focus {
+    outline: 0;
+}
+
+#cardsShift input {
+    font-weight: bold;
+    padding: 5px 10px;
+}

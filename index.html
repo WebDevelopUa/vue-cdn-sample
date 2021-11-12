@@ -7,10 +7,30 @@
           href="style.css">
     <link rel="stylesheet"
           href="circle.css">
+    <link rel="stylesheet"
+          href="cards.css">
 </head>
 <body>
 <h1>Vue CDN</h1>
 
+<hr/>
+
+<!-- APP #5 -->
+<div id="cardsShift">
+    <h4>Cards shift</h4>
+    <button type="button"
+            class="move"
+            @click="move">
+        Shift
+    </button>
+    <div class="card"
+         v-for="item in items"
+         :key="item.name">
+        <strong>{{ item.name }}</strong>
+        <p>{{ item.message }}</p>
+        <input type="text"/>
+    </div>
+</div>
 <hr/>
 
 <!-- APP #4 -->
